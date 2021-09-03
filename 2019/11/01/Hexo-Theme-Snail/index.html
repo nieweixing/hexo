@@ -8,15 +8,15 @@
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="baidu-site-verification" content="093lY4ziMu" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <meta name="description" content="A hexo theme">
-    <meta name="keyword"  content="dusign, hexo-theme-snail">
+    <meta name="description" content="聂伟星个人技术博客">
+    <meta name="keyword"  content="聂伟星，博客">
     <link rel="shortcut icon" href="/hexo/img/ironman-draw.png">
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <!--<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>-->
     <title>
         
-          Hexo-Theme-Snail - Hexo-theme-snail
+          Hexo-Theme-Snail - 聂伟星个人技术博客
         
     </title>
 
@@ -96,10 +96,6 @@
         
     }
     
-    #signature{
-        background-image: url('/hexo/img/signature/dusign.png');
-    }
-    
 </style>
 
 <header class="intro-header" >
@@ -118,7 +114,7 @@
                         <h1>Hexo-Theme-Snail</h1>
                         <h2 class="subheading">A succinct hexo theme.</h2>
                         <span class="meta">
-                            Posted by Dusign on
+                            Posted by 聂伟星 on
                             2019-11-01
                         </span>
 
@@ -164,7 +160,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="/hexo/">Super Snail</a>
+            <a class="navbar-brand" href="/hexo/">聂伟星</a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -222,7 +218,7 @@
                     
                     
                     <li>
-                        <a href="YOUR_CHINESE_BLOG_URL" target="_blank">Chinese Blog</a>
+                        <a href="https://www.niewx.cn/mybook/" target="_blank">Chinese Blog</a>
                     </li>
                     
                 </ul>
@@ -408,6 +404,74 @@
 
                 <!-- gitment start -->
                 
+                <hr>
+                <div id="blog_comments"></div>
+
+<!--
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+-->
+<!--
+<link rel="stylesheet" href="/css/gitment.css">
+<script type="text/javascript" src="/js/gitment.js"></script>
+-->
+
+<script src="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/gitment.browser.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/theme-next/theme-next-gitment@1/default.css"/>
+
+<!--
+<link rel="stylesheet" href="https://billts.site/extra_css/gitment.css">
+<script src="https://billts.site/js/gitment.js"></script>
+-->
+
+<script>
+const myTheme = {
+  render(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'gitment-container gitment-root-container'
+    
+     // your custom component
+    container.appendChild(instance.renderSomething(state, instance))
+    
+    container.appendChild(instance.renderHeader(state, instance))
+    container.appendChild(instance.renderComments(state, instance))
+    container.appendChild(instance.renderEditor(state, instance))
+    //container.appendChild(instance.renderFooter(state, instance))
+    return container
+  },
+  renderSomething(state, instance) {
+    const container = document.createElement('div')
+    container.lang = "en-US"
+    container.className = 'hello_visitor'
+    if (state.user.login) {
+      container.innerText = `Hello ${state.user.login}, Welcome to comment system`
+    }
+    return container
+  }
+}
+
+
+const gitment = new Gitment({
+    id: 'Fri Nov 01 2019 22:02:12 GMT+0800', // optional
+    owner: "nieweixing",
+    repo: "gitalk-comment",
+    oauth: {
+      client_id: "5976cd3d9cc251569467",
+      client_secret: "74117131a57324d4d616267265a94f4a1ac293ec",
+    },
+    theme: myTheme,
+    // ...
+    // For more available options, check out the documentation below
+  })
+  
+  gitment.render('blog_comments')
+  // or
+  // gitment.render(document.getElementById('comments'))
+  // or
+  // document.body.appendChild(gitment.render())
+</script>
+                
                 <!-- gitment end -->
 
                 <!-- 来必力City版安装代码 -->
@@ -464,13 +528,13 @@
                 <ul class="list-inline">
 
                     
-                        <li><a href="https://blog.csdn.net/d_Nail" target="_blank">Dusign&#39;s Blog</a></li>
+                        <li><a href="https://cloud.tencent.com/developer/column/87421" target="_blank">云+社区</a></li>
                     
-                        <li><a href="#" target="_blank">Dusign&#39;s Web</a></li>
+                        <li><a href="https://www.niewx.cn/mybook/" target="_blank">gitbook</a></li>
                     
-                        <li><a href="https://github.com/dusign" target="_blank">Dusign&#39;s Github</a></li>
+                        <li><a href="https://github.com/nieweixing" target="_blank">vashon&#39;s Github</a></li>
                     
-                        <li><a href="#" target="_blank">Other</a></li>
+                        <li><a href="https://weibo.com/3264907804/profile?rig" target="_blank">weibo</a></li>
                     
                 </ul>
                 
@@ -530,7 +594,7 @@
 
                 
                     <li>
-                        <a target="_blank"  href="https://github.com/dusign">
+                        <a target="_blank"  href="https://github.com/nieweixing">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-github fa-stack-1x fa-inverse"></i>
@@ -541,7 +605,7 @@
 
                 
                     <li>
-                        <a target="_blank" href="https://twitter.com/dusignr">
+                        <a target="_blank" href="https://twitter.com/nieweixing">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
@@ -552,7 +616,7 @@
 
                 
                     <li>
-                        <a target="_blank" href="https://www.facebook.com/Gang Du">
+                        <a target="_blank" href="https://www.facebook.com/nieweixing">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
@@ -563,7 +627,7 @@
 
                 
                     <li>
-                        <a target="_blank" href="https://www.zhihu.com/people/dusignr">
+                        <a target="_blank" href="https://www.zhihu.com/people/nieweixing">
                             <span class="fa-stack fa-lg">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa  fa-stack-1x fa-inverse">知</i>
@@ -580,7 +644,7 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; Dusign 2021 
+                    Copyright &copy; 聂伟星 2021 
                     <br>
                     Powered by 
                     <a href="https://github.com/dusign/hexo-theme-snail" target="_blank" rel="noopener">
@@ -656,25 +720,23 @@
 <!-- Google Analytics -->
 
 
-<script>
-    // dynamic User by Hux
-    var _gaId = 'UA-XXXXXXXX-X';
-    var _gaDomain = 'yoursite';
-
-    // Originial
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', _gaId, _gaDomain);
-    ga('send', 'pageview');
-</script>
-
-
 
 
 <!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = 'bfe4709ccd8c5c9e559c89f4fd0866f3';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
 
 <!-- Search -->
